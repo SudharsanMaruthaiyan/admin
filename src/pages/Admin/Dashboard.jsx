@@ -62,8 +62,8 @@ const Dashboard = () => {
                   <p className='text-gray-600'>{slotDateFormat(items.slotDate)}</p>
                 </div>
                 {
-                    items.cancelled ? <p className='text-red-400 text-xs font-medium'>Cancelled</p> : item.isCompleted ? <p className=' text-green-500 font-medium text-xs'>Completed</p> :
-                    <img onClick={()=>cancelAppointment(item._id)} className=' w-10 cursor-pointer' src={assets.cancel_icon} alt="" />
+                    items.cancelled ? <p className='text-red-400 text-xs font-medium'>Cancelled</p> : items.isCompleted ? <p className=' text-green-500 font-medium text-xs'>Completed</p> :
+                    <img onClick={()=>cancelAppointment(items._id)} className=' w-10 cursor-pointer' src={assets.cancel_icon} alt="" />
                 }
               </div>
             ))
